@@ -4,3 +4,49 @@ body, html {
     overflow: hidden; /* Prevent scrollbars */
   }
   
+container: {
+    position: 'relative',
+    height: '100vh',
+    width: '100vw',
+    backgroundColor: '#2b518f',
+    overflow: 'hidden', 
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  clouds: {
+    position: 'absolute',
+    top: '0',
+    width: '200%', 
+    height: '30%',
+    backgroundColor: 'rgba(0, 0, 50, 0)',
+    zIndex: 1,
+  },
+  building: {
+    position: 'absolute',
+    bottom: '-5px',
+    zIndex: 2,
+    
+  },
+  buildingImage: {
+    width: '100vw', 
+    height: '500px',
+    objectFit: 'cover', 
+  },
+  batman: {
+    position: 'absolute',
+    bottom: '0px',
+    width: '150px',
+    zIndex: 3,
+  },
+  batarang: {
+    position: 'absolute',
+    width: '50px',
+    zIndex: 4,
+  },
+  bat: {
+    position: 'absolute',
+    width: '30px',
+    zIndex: 2,
+  },
+};
