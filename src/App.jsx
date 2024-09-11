@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import './BatmanAnimation.css';
 
 import batmanImg from './assets/batman-removebg-preview.png';
 import batarangImg from './assets/batarang-removebg-preview.png';
