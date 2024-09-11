@@ -15,7 +15,7 @@ const BatmanAnimation = () => {
   const cloudsRef = useRef(null);
 
   const handleThunderstormClick = () => {
-    console.log('Thunderstorm clicked'); // Debug log
+    console.log('Thunderstorm clicked'); 
 
     setThunderstorm(true);
 
@@ -23,32 +23,32 @@ const BatmanAnimation = () => {
 
     // Thunderstorm effect
     tl.to(containerRef.current, {
-      backgroundColor: '#032357', // Flash effect
+      backgroundColor: '#032357', 
       duration: 1,
-      onStart: () => console.log('Thunderstorm started'), // Debug log
+      onStart: () => console.log('Thunderstorm started'), 
     });
 
     tl.to(containerRef.current, {
-      backgroundColor: '#444', // Simulate thunder flashes
+      backgroundColor: '#444', //thunder flashes
       duration: 0.1,
       repeat: 5,
       yoyo: true,
       ease: 'linear',
-      onComplete: () => console.log('Thunderstorm completed'), // Debug log
+      onComplete: () => console.log('Thunderstorm completed'), 
     });
 
-    // Batarang swipe animation
+    // Batarang swipe
     tl.fromTo(batarangRef.current, 
       { x: -100, y: 100, opacity: 0 },
       { x: 400, y: -100, opacity: 1, duration: 1.5, ease: 'power2.out' }
     );
 
-    // Bats flying upwards animation
+    // Bats flying 
     batsRef.current.forEach((bat, index) => {
       tl.fromTo(bat, 
         { x: Math.random() * 800, y: Math.random() * 600 + 400, opacity: 0 },
         { x: Math.random() * 800 - 200, y: Math.random() * -600, opacity: 1, duration: 3, ease: 'power1.inOut', repeat: -1, yoyo: true },
-        "-=1"
+        "-=1" //for overlaping
       );
     });
 
