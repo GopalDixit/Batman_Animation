@@ -1,0 +1,51 @@
+/* BatmanAnimation.css */
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #2b518f;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clouds {
+  position: absolute;
+  top: 0;
+  width: 200%;
+  height: 30%;
+  background-color: rgba(0, 0, 50, 0);
+  z-index: 1;
+}
+
+.building {
+  position: absolute;
+  bottom: -5px;
+  z-index: 2;
+}
+
+.buildingImage {
+  width: 100vw;
+  height: 500px;
+  object-fit: cover;
+}
+
+.batman {
+  position: absolute;
+  bottom: 0px;
+  width: 150px;
+  z-index: 3;
+}
+
+.batarang {
+  position: absolute;
+  width: 50px;
+  z-index: 4;
+}
+
+.bat {
+  position: absolute;
+  width: 30px;
+  z-index: 2;
+}
