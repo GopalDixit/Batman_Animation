@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import './BatmanAnimation.css';
 
+// Import images
 import batmanImg from './assets/batman-removebg-preview.png';
 import batarangImg from './assets/batarang-removebg-preview.png';
 import batImg from './assets/batimg-removebg-preview.png';
@@ -23,7 +23,7 @@ const BatmanAnimation = () => {
 
     // Thunderstorm effect
     tl.to(containerRef.current, {
-      backgroundColor: '#032357', 
+      backgroundColor: '#032357', // Flash effect
       duration: 1,
       onStart: () => console.log('Thunderstorm started'), // Debug log
     });
@@ -101,6 +101,53 @@ const BatmanAnimation = () => {
     </div>
   );
 };
-  
+
+const styles = {
+  container: {
+    position: 'relative',
+    height: '100vh',
+    width: '100vw',
+    backgroundColor: '#2b518f',
+    overflow: 'hidden', 
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  clouds: {
+    position: 'absolute',
+    top: '0',
+    width: '200%', 
+    height: '30%',
+    backgroundColor: 'rgba(0, 0, 50, 0)',
+    zIndex: 1,
+  },
+  building: {
+    position: 'absolute',
+    bottom: '-5px',
+    zIndex: 2,
+    
+  },
+  buildingImage: {
+    width: '100vw', 
+    height: '500px',
+    objectFit: 'cover', 
+  },
+  batman: {
+    position: 'absolute',
+    bottom: '0px',
+    width: '150px',
+    zIndex: 3,
+  },
+  batarang: {
+    position: 'absolute',
+    width: '50px',
+    zIndex: 4,
+  },
+  bat: {
+    position: 'absolute',
+    width: '30px',
+    zIndex: 2,
+  },
+};
 
 export default BatmanAnimation;
